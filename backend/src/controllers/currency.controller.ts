@@ -10,7 +10,7 @@ export class CurrencyController {
     static async getCurrencies(req: Request, res: Response) {
         try {
             const currencies = await CurrencyService.getCurrencies();
-            res.status(200).json({currencies});
+            res.status(200).json({ currencies });
         } catch (error) {
             res.status(500).json({ message: error });
         }
@@ -18,23 +18,43 @@ export class CurrencyController {
 
     static async convertCurrency(req: Request, res: Response) {
         const { base, target, amount } = req.body;
+        console.log("Request received:", { base, target, amount });
+
         try {
-            const result = await CurrencyService.convertCurrency(base, target, parseFloat(amount));
+            const parsedAmount = parseFloat(amount);
+            console.log("Parsed amount:", parsedAmount);
+
+            const result = await CurrencyService.convertCurrency(base, target, parsedAmount);
+            console.log("Conversion result:", result);
+
             const history: ConversionHistory = {
                 id: uuidv4(),
                 baseCurrency: base,
                 targetCurrency: target,
-                amount,
+                amount: parsedAmount,
                 result,
                 date: new Date().toISOString(),
             };
+            console.log("History object:", history);
 
-            const historyData = JSON.parse(fs.readFileSync(historyFilePath, "utf-8"));
+            let historyData = [];
+            try {
+                const fileContent = fs.readFileSync(historyFilePath, "utf-8");
+                if (fileContent) {
+                    historyData = JSON.parse(fileContent);
+                }
+            } catch (err) {
+                console.error("Error reading or parsing history file:", err);
+            }
+
             historyData.push(history);
             fs.writeFileSync(historyFilePath, JSON.stringify(historyData, null, 2));
+            console.log("Updated history data written to file");
+
             res.status(200).json({ conversion: history });
         } catch (error) {
-            res.status(500).json({ message: error });
+            console.error("Error in convertCurrency:", error);
+            res.status(500).json({ message: error || "Internal Server Error" });
         }
     }
 

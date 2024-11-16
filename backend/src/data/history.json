@@ -1,0 +1,42 @@
+[
+  {
+    "id": "dcd79d9c-1e8c-4fc7-b013-44ba3d946995",
+    "baseCurrency": "USD",
+    "targetCurrency": "EUR",
+    "amount": 100,
+    "result": 94.82101317,
+    "date": "2024-11-16T22:58:03.754Z"
+  },
+  {
+    "id": "9273c151-5d4c-44e2-8f3d-3056e5301706",
+    "baseCurrency": "USD",
+    "targetCurrency": "BGN",
+    "amount": 100,
+    "result": 184.41702429,
+    "date": "2024-11-16T22:59:35.234Z"
+  },
+  {
+    "id": "b1efdf09-2c25-4f13-ab26-39140a27a424",
+    "baseCurrency": "USD",
+    "targetCurrency": "EUR",
+    "amount": 100,
+    "result": 94.82101317,
+    "date": "2024-11-16T22:59:54.849Z"
+  },
+  {
+    "id": "bccb6c23-d514-4e83-b4b3-ac7cf3b096de",
+    "baseCurrency": "USD",
+    "targetCurrency": "EUR",
+    "amount": 100,
+    "result": 94.82101317,
+    "date": "2024-11-16T23:00:53.645Z"
+  },
+  {
+    "id": "1a7bf704-f8fc-48d2-89d6-fd0be215fc0c",
+    "baseCurrency": "EUR",
+    "targetCurrency": "USD",
+    "amount": 100,
+    "result": 105.46185561000001,
+    "date": "2024-11-16T23:01:06.305Z"
+  }
+]

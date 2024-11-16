@@ -1,0 +1,49 @@
+<div class="container mt-4">
+  <h2 class="text-center">Currency Converter</h2>
+
+  <div class="form-group">
+    <label for="base-currency">Base Currency</label>
+    <mat-select [(ngModel)]="baseCurrency" id="base-currency">
+      <mat-option *ngFor="let currency of currencies" [value]="currency">
+        {{ currency }}
+      </mat-option>
+    </mat-select>
+  </div>
+
+  <div class="form-group">
+    <label for="target-currency">Target Currency</label>
+    <mat-select [(ngModel)]="targetCurrency" id="target-currency">
+      <mat-option *ngFor="let currency of currencies" [value]="currency">
+        {{ currency }}
+      </mat-option>
+    </mat-select>
+  </div>
+
+  <div class="form-group">
+    <label for="amount">Amount</label>
+    <input
+      type="number"
+      id="amount"
+      [(ngModel)]="amount"
+      class="form-control"
+      placeholder="Enter amount"
+    />
+  </div>
+
+  <div class="text-center">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="convertCurrency()"
+      [disabled]="!amount || !baseCurrency || !targetCurrency"
+    >
+      Convert
+    </button>
+  </div>
+
+  <div class="result mt-4 text-center" *ngIf="conversionResult !== null">
+    <h3>Converted Amount: {{ conversionResult | number: '1.2-2' }}</h3>
+  </div>
+
+  <mat-spinner *ngIf="loading"></mat-spinner>
+</div>
