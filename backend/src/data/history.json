@@ -38,5 +38,109 @@
     "amount": 100,
     "result": 105.46185561000001,
     "date": "2024-11-16T23:01:06.305Z"
+  },
+  {
+    "id": "2043fb71-40a2-4099-b5de-7e53de4fc774",
+    "baseCurrency": "USD",
+    "targetCurrency": "EUR",
+    "amount": 100,
+    "result": 94.93001706999999,
+    "date": "2024-11-18T18:32:07.027Z"
+  },
+  {
+    "id": "10d634c2-ab27-45eb-a6b2-d77fabfe20ed",
+    "baseCurrency": "USD",
+    "targetCurrency": "BGN",
+    "amount": 100,
+    "result": 184.42102413,
+    "date": "2024-11-18T18:32:21.093Z"
+  },
+  {
+    "id": "705c765d-d96d-4cc6-b01d-85b650805f05",
+    "baseCurrency": "EUR",
+    "targetCurrency": "CZK",
+    "amount": 46,
+    "result": 1159.8076398382,
+    "date": "2024-11-18T18:32:41.111Z"
+  },
+  {
+    "id": "519653eb-e60b-4add-bc5b-d669ffe04a33",
+    "baseCurrency": "EUR",
+    "targetCurrency": "CZK",
+    "amount": 46,
+    "result": 1159.8076398382,
+    "date": "2024-11-18T18:32:46.285Z"
+  },
+  {
+    "id": "cac563f8-ff59-4e91-a72d-b29396187777",
+    "baseCurrency": "EUR",
+    "targetCurrency": "CZK",
+    "amount": 6788665,
+    "result": 171164033.28917813,
+    "date": "2024-11-18T18:32:51.740Z"
+  },
+  {
+    "id": "e627fb4f-36e1-461b-b072-e8b754308704",
+    "baseCurrency": "EUR",
+    "targetCurrency": "CZK",
+    "amount": 6788665,
+    "result": 171164033.28917813,
+    "date": "2024-11-18T18:32:58.661Z"
+  },
+  {
+    "id": "3d66fba6-30ac-4f94-81ff-0a06618ec058",
+    "baseCurrency": "USD",
+    "targetCurrency": "CZK",
+    "amount": 122,
+    "result": 2920.0583051776002,
+    "date": "2024-11-18T18:37:28.818Z"
+  },
+  {
+    "id": "2ee54304-6747-4a8a-a003-79ad89e7c3b6",
+    "baseCurrency": "USD",
+    "targetCurrency": "CAD",
+    "amount": 123,
+    "result": 173.2492206024,
+    "date": "2024-11-18T18:40:09.488Z"
+  },
+  {
+    "id": "ff825109-1f3c-4730-bc8f-6994d7f69ae3",
+    "baseCurrency": "USD",
+    "targetCurrency": "CAD",
+    "amount": 123,
+    "result": 173.2492206024,
+    "date": "2024-11-18T18:40:13.273Z"
+  },
+  {
+    "id": "843e2ed0-e062-442c-9535-794e75991b56",
+    "baseCurrency": "USD",
+    "targetCurrency": "BGN",
+    "amount": 123,
+    "result": 226.83785967990002,
+    "date": "2024-11-18T18:43:44.978Z"
+  },
+  {
+    "id": "627d2ba8-6a56-419d-85a1-110adf7c1dd6",
+    "baseCurrency": "BGN",
+    "targetCurrency": "CZK",
+    "amount": 233,
+    "result": 3023.9679511221,
+    "date": "2024-11-18T18:44:15.949Z"
+  },
+  {
+    "id": "c0163eca-8682-4396-8c7d-e5b46ed9808b",
+    "baseCurrency": "USD",
+    "targetCurrency": "CZK",
+    "amount": 150,
+    "result": 3590.23562112,
+    "date": "2024-11-18T20:55:42.956Z"
+  },
+  {
+    "id": "cf77c81c-c8c5-4d73-b03e-232cbce7770c",
+    "baseCurrency": "HKD",
+    "targetCurrency": "TRY",
+    "amount": 700,
+    "result": 3097.8554652499997,
+    "date": "2024-11-18T20:56:42.422Z"
   }
 ]

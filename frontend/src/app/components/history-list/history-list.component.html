@@ -1,1 +1,14 @@
-<p>history-list works!</p>
+<div class="container mt-4">
+    <h3 class="text-center">Conversion History</h3>
+
+    <div *ngIf="history.length === 0" class="text-center">
+        <p>No conversions done yet.</p>
+    </div>
+
+    <ul class="list-group" *ngIf="history.length > 0">
+        <li class="list-group-item" *ngFor="let item of history">
+            <strong>{{ item.baseCurrency }} to {{ item.targetCurrency }}</strong>:
+            {{ item.amount }} → {{ item.result | number: '1.2-2' }} at {{ item.date | date: 'short' }}
+        </li>
+    </ul>
+</div>
