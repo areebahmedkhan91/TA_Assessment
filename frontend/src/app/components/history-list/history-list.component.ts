@@ -12,6 +12,11 @@ export class HistoryListComponent implements OnInit {
 
   constructor(private apiService: CurrencyApiService) { }
   ngOnInit(): void {
+
+    this.apiService.history$.subscribe((data: any[]) => {
+      this.history = data;
+    });
+
     this.apiService.getHistory().subscribe((data) => {
       this.history = data;
     })

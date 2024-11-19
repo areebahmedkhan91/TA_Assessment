@@ -14,8 +14,9 @@ export class CurrencyConverterComponent implements OnInit{
   public amount: number = 0;
   public conversionResult: number | null = null;
   public loading: boolean = false;
+  public conversionData: any[] = [];
 
-  constructor(private currencyAPI: CurrencyApiService) { }
+  constructor(private currencyAPI: CurrencyApiService, private apiService: CurrencyApiService) { }
 
   ngOnInit(): void {
     this.currencyAPI.getCurrencies().subscribe((data: any) => {
@@ -29,6 +30,15 @@ export class CurrencyConverterComponent implements OnInit{
       this.conversionResult = data.conversion.result;
       // console.log(data);
       this.loading = false;
+      this.reloadHistory();
+
+    });
+  }
+
+  reloadHistory(): void {
+    this.apiService.getHistory().subscribe((data: any[]) => {
+      // Emit or share updated history with the HistoryListComponent
+      this.apiService.updateHistory(data);
     });
   }
 
